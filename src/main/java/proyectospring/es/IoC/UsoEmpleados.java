@@ -8,6 +8,7 @@ public class UsoEmpleados {
 		//Paso 1 Crar un contexto: Creando un objto o instancia de la clase: "Cargar el archivo xml"
 		ClassPathXmlApplicationContext contexto = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
+		/* Para constructor
 		// Paso 2: Pedir a contexto el bean. Nos va apedir el alias que le dimos al motor de bean, nombre de la interfaz
 		Empleados Juan= contexto.getBean("miEmpleado", Empleados.class);
 		
@@ -18,7 +19,12 @@ public class UsoEmpleados {
 		
 		//Paso 4: Cerrar el contexto, para liberar recursos
 		contexto.close();
+		*/
 		
+		Empleados Maria= contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		System.out.println(Maria.getTareas());
+		
+		System.out.println(Maria.getInforme());
 	}
 
 }

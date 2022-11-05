@@ -20,12 +20,4 @@
 	</constructor-arg>
 </bean>
 
-<!--BEAN PARA INYECCION DE DEPENDECIAS CON SETTER -->
-<bean id="miSecretarioEmpleado" class="proyectospring.es.IoC.SecretarioEmpleado">
-	<!-- Cuando trabajamos con setter usamos property y name es el nombre del setter-->
-	<!-- setInformeNuevo quedaria como informeNuevo-->
-	<property name="informeNuevo" ref="miInforme"></property>
-	<!-- agregamos tambien la referencia -->
-</bean>
-
 </beans>
