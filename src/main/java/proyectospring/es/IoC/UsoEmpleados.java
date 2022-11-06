@@ -21,10 +21,13 @@ public class UsoEmpleados {
 		contexto.close();
 		*/
 		
-		Empleados Maria= contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		//Empleados Maria= contexto.getBean("miSecretarioEmpleado", Empleados.class);
+		SecretarioEmpleado Maria= contexto.getBean("miSecretarioEmpleado", SecretarioEmpleado.class);
 		System.out.println(Maria.getTareas());
 		
 		System.out.println(Maria.getInforme());
+		System.out.println(Maria.getEmail());
+		System.out.println(Maria.getNombreEmpresa());
 	}
 
 }

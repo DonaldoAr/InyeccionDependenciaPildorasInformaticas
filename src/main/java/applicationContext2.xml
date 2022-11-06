@@ -26,9 +26,6 @@
 	<!-- setInformeNuevo quedaria como informeNuevo-->
 	<property name="informeNuevo" ref="miInforme"></property>
 	<!-- agregamos tambien la referencia -->
-	
-	<property name="email" value="secretaria@email.com"></property>
-	<property name="nombreEmpresa" value="lic valeriano"></property>
 </bean>
 
 </beans>
