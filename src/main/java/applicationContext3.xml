@@ -8,7 +8,7 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
-<context:property-placeholder location="classpath:/datosEmpresa.propiedades" />
+
 
 <!-- Creación de dependencia -->
 <bean id="miInforme" class="proyectospring.es.IoC.Informe"> </bean>
@@ -27,8 +27,8 @@
 	<property name="informeNuevo" ref="miInforme"></property>
 	<!-- agregamos tambien la referencia -->
 	
-	<property name="email" value="${email}"></property>
-	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
+	<property name="email" value="secretaria@email.com"></property>
+	<property name="nombreEmpresa" value="lic valeriano"></property>
 </bean>
 
 </beans>
