@@ -8,16 +8,27 @@
     http://www.springframework.org/schema/context 
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
-
+<context:property-placeholder location="classpath:/datosEmpresa.propiedades" />
 
 <!-- Creación de dependencia -->
 <bean id="miInforme" class="proyectospring.es.IoC.Informe"> </bean>
 
+<!-- Generador de beans o motor: Proporcionar los objetos que le estamos pidiendo -->
+<!-- class: Donde se encuentra la clase -->
+<bean id="miEmpleado" class="proyectospring.es.IoC.JefeEmpleado">
+	<constructor-arg ref="miInforme">
+	</constructor-arg>
+</bean>
 
 <!--BEAN PARA INYECCION DE DEPENDECIAS CON SETTER -->
-<!-- <bean id="miSecretarioEmpleado" class="proyectospring.es.IoC.SecretarioEmpleado"> -->
-<bean id="miSecretarioEmpleado" class="proyectospring.es.IoC.SecretarioEmpleado" scope="prototype">
+<bean id="miSecretarioEmpleado" class="proyectospring.es.IoC.SecretarioEmpleado">
+	<!-- Cuando trabajamos con setter usamos property y name es el nombre del setter-->
+	<!-- setInformeNuevo quedaria como informeNuevo-->
 	<property name="informeNuevo" ref="miInforme"></property>
+	<!-- agregamos tambien la referencia -->
+	
+	<property name="email" value="${email}"></property>
+	<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
 </bean>
 
 </beans>
